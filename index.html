@@ -6,25 +6,76 @@
   <meta charset="UTF-8">
   <title>Madhulika Tirupatipanya Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Add this script tag for html2pdf.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        $("#btnPrint").live("click", function () {
-            var divContents = $("#dvContainer").html();
-            var printWindow = window.open('', '', 'height=400,width=800');
-            printWindow.document.write('<html><head><title>DIV Contents</title>');
-            printWindow.document.write('</head><body >');
-            printWindow.document.write(divContents);
-            printWindow.document.write('</body></html>');
-            printWindow.document.close();
-            printWindow.print();
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    #top-bar {
+      background-color: #333;
+      color: #fff;
+      text-align: right;
+      padding: 10px;
+    }
+
+    #download-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #dvContainer {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+    <!-- Add this script tag below the existing script tags in the head -->
+<script>
+    $(document).ready(function () {
+        $("#btnDownloadPDF").click(function () {
+            var element = document.getElementById("dvContainer");
+
+            html2pdf(element, {
+                margin: 10,
+                filename: 'Madhulika_Tirupatipanya_Portfolio.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            });
         });
-    </script>
+    });
+</script>
+
 
  
 
 </head>
 <body>
+
+  <div id="top-bar">
+    <button id="download-btn">Download PDF</button>
+  </div>
     <form id="form1">
     <div id="dvContainer">
 
@@ -256,7 +307,7 @@ Persuasive communicator with exceptional relationship management skills with the
 
 
     </div>
-    <input type="button" value="Print Div Contents" id="btnPrint" />
+   
     </form>
 </body>
 </html>
