@@ -4,20 +4,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Madhulika Tirupatipanya</title>
+  <title>Resume/CV Design</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
+    <script type="text/javascript">
+        $("#btnPrint").live("click", function () {
+            var divContents = $("#dvContainer").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>DIV Contents</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+    </script>
 
  
 
 </head>
 <body>
-    
-<button class = "w3-block w3-black"  value="Download" onclick="window.print()"> Madhulika Tirupatipanya Portfolio.PDF</button>
-    
+    <form id="form1">
+    <div id="dvContainer">
+
 
 <div class="resume">
    <div class="resume_left">
@@ -50,7 +60,7 @@
            </li>
            <li>
              <div class="icon">
-               <i class="fas fa-envelope"></i>
+               <i class="fa fa-envelope"></i>
              </div>
              <div class="data">
                madhulika898@gmail.com
@@ -60,7 +70,7 @@
        </div>
        <div class="resume_item resume_skills">
          <div class="title">
-           <p class="bold">skills</p>
+           <p class="bold">skill's</p>
          </div>
          <ul>
            <li>
@@ -110,6 +120,55 @@
            </li>
          </ul>
        </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold">Certifications</p>
+         </div>
+         <ul>
+           <li>
+             <div class="skill_name">
+               Microsoft Certified: Azure Fundamentals
+               <img src="az900.png" alt="AZ900">
+             </div>
+           </li>
+           <li>
+             <div class="skill_name">
+               SQL
+             </div>
+             <div class="skill_progress">
+               <span style="width: 70%;"></span>
+             </div>
+             <div class="skill_per">70%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               HTML
+             </div>
+             <div class="skill_progress">
+               <span style="width: 90%;"></span>
+             </div>
+             <div class="skill_per">90%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               Python
+             </div>
+             <div class="skill_progress">
+               <span style="width: 60%;"></span>
+             </div>
+             <div class="skill_per">60%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               JS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 88%;"></span>
+             </div>
+             <div class="skill_per">88%</div>
+           </li>
+         </ul>
+       </div>
        <div class="resume_item resume_social">
          <div class="title">
            <p class="bold">Social</p>
@@ -120,26 +179,17 @@
                <i class="fab fa-twitter-square"></i>
              </div>
              <div class="data">
-               <a href= https://twitter.com/home target="_blank" class="semi-bold">Twitter</a>
-               <p>madhulika898</p>
+               <p class="semi-bold">Twitter</p>
+               <p>madhulika898@twitter</p>
              </div>
            </li>
            
            <li>
              <div class="icon">
-               <i class="fab fa-linkedin-in"></i>
+               <i class="fab fa-linkedin-square"></i>
              </div>
              <div class="data">
-               <a href= https://www.linkedin.com/in/madhulika-tirupatipanya-baa5a797/?originalSubdomain=in target="_blank" class="semi-bold">Linkedin</a>
-               <p>Madhulika Tirupatipanya</p>
-             </div>
-           </li>
-           <li>
-             <div class="icon">
-               <i class="fab fa-github"></i>
-             </div>
-             <div class="data">
-               <a href= https://github.com/MadhulikaTirupatipanya target="_blank" class="semi-bold">GitHub</a>
+               <p class="semi-bold">Linkedin</p>
                <p>Madhulika Tirupatipanya</p>
              </div>
            </li>
@@ -152,9 +202,9 @@
         <div class="title">
            <p class="bold">About</p>
          </div>
-        <p>Result oriented individual, working towards developing solutions with more than four years of expertise in VBA,SQL, JavaScript and Python.
-Hands-on experience with front end development languages like HTML/CSS,Bootstrap and javascript.
-Persuasive communicator with exceptional relationship management skills. Highly ethical, trustworthy and discreet.</p>
+        <p>Result oriented individual, working towards developing solutions with more than four years of expertise in VBA,SQL, JavaScript and Python
+Hands-on experience with front end development with languages like HTML/CSS,Bootstrap and javascript,
+Persuasive communicator with exceptional relationship management skills with the ability to relate to people at any level of business and management. Highly ethical, trustworthy and discreet.</p>
     </div>
     <div class="resume_item resume_work">
         <div class="title">
@@ -166,14 +216,14 @@ Persuasive communicator with exceptional relationship management skills. Highly 
                 <div class="date">2017 - 2021</div> 
                 <div class="info">
                      <p class="semi-bold">Amazon Development Centre</p> 
-                  <p> Worked as SME for various teams to develop SOP.Expertise in web automation, data visualization and report generation to address the process gaps and improvements.Automated various complex tasks by creating HTML dashboards and python scripts.</p>
+                  <p> Worked as SME for various teams to develop SOP.Expertise in data collection, data visualization and report generation to address the process gaps and improvements.Automated various simple tasks by creating HTML dashboards and python scripts.</p>
                 </div>
             </li>
             <li>
               <div class="date">2021 - Present</div>
               <div class="info">
                      <p class="semi-bold">Accenture</p> 
-                  <p> Built VBA, .NET, Oracle based applications, along with RPA automation and cloud support. Developed, enhanced, and maintained MS Office applications, and handle both frontend and backend development procedures.Identified, designed, develop and implement business process for automation.</p>
+                  <p> Built VB prototypes and small scale applications, along with VBA scripts, in a bid to automate Excel spreadsheets.Developed, enhanced, and maintained MS Office applications, and handle both frontend and backend development procedures.Identified, designed, develop and implement business process for automation.</p>
                 </div>
             </li>
             <li>
@@ -188,10 +238,16 @@ Persuasive communicator with exceptional relationship management skills. Highly 
                 <div class="date">2013 - 2017</div> 
                 <div class="info">
                      <p class="semi-bold">Aeronautical Engineering (JNTU University)</p> 
-                  <p>Completed Bachelor's degree in Aeronautical Engineering with Distinction</p>
+                  <p>Completed Bachelor's degree in Aeronautical Engineering</p>
                 </div>
             </li>
-            
+            <li>
+              <div class="date">2011 - 2013</div>
+              <div class="info">
+                     <p class="semi-bold">Narayana Jr College</p> 
+                  <p>Completed Intermidiate studies in Maths, Physics and Chemistry</p>
+                </div>
+            </li>
         </ul>
     </div>
     <div class="resume_item resume_hobby">
@@ -202,7 +258,7 @@ Persuasive communicator with exceptional relationship management skills. Highly 
          <li><i class="fas fa-book"></i></li>
          <li><i class="fas fa-gamepad"></i></li>
          <li><i class="fas fa-music"></i></li>
-         <li><i class="fas fa-walking"></i></li>
+         <li><i class="fab fa-pagelines"></i></li>
       </ul>
     </div>
   </div>
@@ -212,6 +268,7 @@ Persuasive communicator with exceptional relationship management skills. Highly 
 
 
     </div>
-    
+    <input type="button" value="Print Div Contents" id="btnPrint" />
+    </form>
 </body>
 </html>
