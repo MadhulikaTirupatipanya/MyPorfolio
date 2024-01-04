@@ -119,6 +119,8 @@ body {
 
 .resume .resume_left .resume_skills ul li .skill_name {
   width: 25%;
+  white-space: nowrap;
+
 }
 
 .resume .resume_left .resume_skills ul li .skill_progress {
